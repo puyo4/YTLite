@@ -44,7 +44,7 @@ jobs:
 
       - name: Download YouTube
         id: download_youtube
-        run: wget "${{ inputs.ipa_url }}" --no-verbose -O ${{ github.workspace }}/youtube.ipa
+        run: wget "${{ inputs.ipa_url }}" --no-verbose --no-check-certificate -O ${{ github.workspace }}/youtube.ipa
 
       - name: Download YouTube Plus
         id: download_ytp
